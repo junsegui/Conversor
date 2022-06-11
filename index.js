@@ -31,17 +31,21 @@ document.addEventListener("DOMContentLoaded",async()=>{
 form.addEventListener("submit",async(e)=>{
     e.preventDefault();
 
-    input1.value = 0
+    
 
     const value = input1.value;
     
-    const conversion = await fetch(`https://api.frankfurter.app/latest?amount=${value}&from=${select1.value}&to=${select2.value}
+    if(value){
+        const conversion = await fetch(`https://api.frankfurter.app/latest?amount=${value}&from=${select1.value}&to=${select2.value}
     `)
     const conversionJSON = await conversion.json();
 
     const {rates} = conversionJSON;
 
     input2.value = Object.values(rates)
+    }else{
+        alert(`insert number`)
+    }
 
     
 
@@ -64,7 +68,7 @@ form.addEventListener("submit",async(e)=>{
     h2.appendChild(val);
     eqt.appendChild(h2);
     const h3 = document.createElement("h3");
-    const va2 = document.createTextNode(`1 ${select1.value} equals`);
+    const va2 = document.createTextNode(`1 ${select1.value} Equals to...`);
     h3.appendChild(va2);
     
     

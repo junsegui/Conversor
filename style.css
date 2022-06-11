@@ -1,5 +1,5 @@
 body{
-    background-color: #F4BFBF;
+    background-color: #5c6bc0;
     padding: 0;
     margin: 0;
  
@@ -14,10 +14,13 @@ body{
     width: 20%;
     height: 100vh;
     display: flex;
-    background-color: #FFD9C0;
+    background-color: #26418f;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.75);
 }
 .secondCuarter{
     width: 80%;
@@ -57,7 +60,7 @@ body{
     justify-content: center;
 }
 h1{
-    color: #8CC0DE;
+    color: black;
     font-size: 5rem;
 }
 .converter{
@@ -125,13 +128,16 @@ button{
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    
 }
 h3{
     font-size: 2rem;
+    color: rgb(177, 169, 169);
 
 }
 h2{
     font-size: 3rem;
+    color: white;
 }
 #eq1{
     height: 50%;
